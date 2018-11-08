@@ -6,6 +6,7 @@ project.ext {
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 28
@@ -49,4 +50,8 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
     implementation "com.android.support:design:$project.appcompat"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

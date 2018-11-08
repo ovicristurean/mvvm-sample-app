@@ -1,12 +1,9 @@
 package com.example.test.mvvmsampleapp.service.repository;
 
+import java.util.List;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
-
 import com.example.test.mvvmsampleapp.service.model.Project;
-
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

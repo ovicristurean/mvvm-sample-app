@@ -7,12 +7,12 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.databinding.ObservableField;
 import android.support.annotation.NonNull;
-
 import com.example.test.mvvmsampleapp.service.model.Project;
 import com.example.test.mvvmsampleapp.service.repository.ProjectRepository;
 
 public class ProjectViewModel extends AndroidViewModel {
     private final LiveData<Project> projectObservable;
+
     private final String projectID;
 
     public ObservableField<Project> project = new ObservableField<>();

@@ -1,19 +1,17 @@
 package com.example.test.mvvmsampleapp.view.adapter;
 
+import java.util.List;
+import java.util.Objects;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.Nullable;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import com.example.test.mvvmsampleapp.R;
 import com.example.test.mvvmsampleapp.databinding.ProjectListItemBinding;
 import com.example.test.mvvmsampleapp.service.model.Project;
 import com.example.test.mvvmsampleapp.view.callback.ProjectClickCallback;
-
-import java.util.List;
-import java.util.Objects;
 
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectViewHolder> {
 
@@ -44,16 +42,16 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
 
                 @Override
                 public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-                    return ProjectAdapter.this.projectList.get(oldItemPosition).id ==
-                            projectList.get(newItemPosition).id;
+                    return ProjectAdapter.this.projectList.get(oldItemPosition).getId() ==
+                            projectList.get(newItemPosition).getId();
                 }
 
                 @Override
                 public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
                     Project project = projectList.get(newItemPosition);
                     Project old = projectList.get(oldItemPosition);
-                    return project.id == old.id
-                            && Objects.equals(project.git_url, old.git_url);
+                    return project.getId() == old.getId()
+                            && Objects.equals(project.getGit_url(), old.getGit_url());
                 }
             });
             this.projectList = projectList;

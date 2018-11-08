@@ -1,9 +1,7 @@
 package com.example.test.mvvmsampleapp.service.repository;
 
-import com.example.test.mvvmsampleapp.service.model.Project;
-
 import java.util.List;
-
+import com.example.test.mvvmsampleapp.service.model.Project;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

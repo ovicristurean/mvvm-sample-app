@@ -22,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /** Shows the project detail fragment */
+    /**
+     * Shows the project detail fragment
+     */
     public void show(Project project) {
-        ProjectFragment projectFragment = ProjectFragment.forProject(project.name);
+        ProjectFragment projectFragment = ProjectFragment.forProject(project.getName());
 
         getSupportFragmentManager()
                 .beginTransaction()

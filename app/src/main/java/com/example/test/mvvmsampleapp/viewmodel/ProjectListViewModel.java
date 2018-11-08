@@ -1,13 +1,11 @@
 package com.example.test.mvvmsampleapp.viewmodel;
 
+import java.util.List;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
-
 import com.example.test.mvvmsampleapp.service.model.Project;
 import com.example.test.mvvmsampleapp.service.repository.ProjectRepository;
-
-import java.util.List;
 
 public class ProjectListViewModel extends AndroidViewModel {
     private final LiveData<List<Project>> projectListObservable;
