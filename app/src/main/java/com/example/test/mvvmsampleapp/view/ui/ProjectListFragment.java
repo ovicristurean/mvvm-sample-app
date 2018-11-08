@@ -1,16 +1,16 @@
 package com.example.test.mvvmsampleapp.view.ui;
 
+import java.util.List;
 import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleFragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.test.mvvmsampleapp.R;
 import com.example.test.mvvmsampleapp.databinding.FragmentProjectListBinding;
 import com.example.test.mvvmsampleapp.service.model.Project;
@@ -18,9 +18,7 @@ import com.example.test.mvvmsampleapp.view.adapter.ProjectAdapter;
 import com.example.test.mvvmsampleapp.view.callback.ProjectClickCallback;
 import com.example.test.mvvmsampleapp.viewmodel.ProjectListViewModel;
 
-import java.util.List;
-
-public class ProjectListFragment extends LifecycleFragment {
+public class ProjectListFragment extends Fragment {
     public static final String TAG = "ProjectListFragment";
     private ProjectAdapter projectAdapter;
     private FragmentProjectListBinding binding;
