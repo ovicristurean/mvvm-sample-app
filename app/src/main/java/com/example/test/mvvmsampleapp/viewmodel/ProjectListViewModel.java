@@ -14,7 +14,7 @@ public class ProjectListViewModel extends AndroidViewModel {
         super(application);
 
         // If any transformation is needed, this can be simply done by Transformations class ...
-        projectListObservable = ProjectRepository.getInstance().getProjectList("Google");
+        projectListObservable = ProjectRepository.Companion.getInstance().getProjectList("Google");
     }
 
     /**

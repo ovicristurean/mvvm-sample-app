@@ -22,7 +22,7 @@ public class ProjectViewModel extends AndroidViewModel {
         super(application);
         this.projectID = projectID;
 
-        projectObservable = ProjectRepository.getInstance().getProjectDetails("Google", projectID);
+        projectObservable = ProjectRepository.Companion.getInstance().getProjectDetails("Google", projectID);
     }
 
     public LiveData<Project> getObservableProject() {
