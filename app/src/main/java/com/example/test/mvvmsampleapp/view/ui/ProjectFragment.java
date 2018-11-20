@@ -16,12 +16,13 @@ import com.example.test.mvvmsampleapp.viewmodel.ProjectViewModel;
 
 public class ProjectFragment extends Fragment {
     private static final String KEY_PROJECT_ID = "project_id";
+
     private FragmentProjectDetailsBinding binding;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState) {
         // Inflate this data binding layout
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_project_details, container, false);
 
@@ -57,7 +58,9 @@ public class ProjectFragment extends Fragment {
         });
     }
 
-    /** Creates project fragment for specific project ID */
+    /**
+     * Creates project fragment for specific project ID
+     */
     public static ProjectFragment forProject(String projectID) {
         ProjectFragment fragment = new ProjectFragment();
         Bundle args = new Bundle();
